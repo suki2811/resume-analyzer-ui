@@ -1,13 +1,7 @@
 export default function UploadCard() {
   return (
-    <div
-      style={{
-        background: "#161a22",
-        padding: "20px",
-        borderRadius: "12px",
-      }}
-    >
-      <h3>Upload Resume</h3>
+    <div className="card">
+      <div className="card-title">Upload Resume</div>
       <input type="file" />
     </div>
   );
