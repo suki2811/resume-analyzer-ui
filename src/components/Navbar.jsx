@@ -2,13 +2,20 @@ export default function Navbar() {
   return (
     <div
       style={{
-        fontSize: "20px",
-        fontWeight: "bold",
-        paddingBottom: "20px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingBottom: "24px",
         borderBottom: "1px solid #1f2937",
       }}
     >
-      Resume Analyzer
+      <div style={{ fontSize: "22px", fontWeight: "700" }}>
+        Resume Analyzer
+      </div>
+
+      <div style={{ color: "#9ca3af", fontSize: "14px" }}>
+        Demo ATS Platform
+      </div>
     </div>
   );
 }
