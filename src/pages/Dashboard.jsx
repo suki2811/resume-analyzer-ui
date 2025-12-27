@@ -54,6 +54,19 @@ export default function Dashboard() {
       </div>
 
       <div className="section fade-up fade-delay-3" style={{ textAlign: "center" }}>
+        {(!role || !resumeText) && (
+  <p
+    style={{
+      marginTop: "20px",
+      fontSize: "14px",
+      color: "#64748b",
+      textAlign: "center",
+    }}
+  >
+    Select a role and paste resume text to get meaningful results
+  </p>
+)}
+
         <button className="hero-btn" onClick={() => setShowResults(true)}>
           Analyze Resume
         </button>
