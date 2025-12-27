@@ -1,16 +1,17 @@
 export default function Landing({ onStart }) {
   return (
     <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "40px",
-        textAlign: "center",
-      }}
-    >
+  style={{
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "80px 24px",
+    textAlign: "center",
+  }}
+>
+
       <h1
   style={{
     fontFamily: "Rubik Mono One, monospace",
