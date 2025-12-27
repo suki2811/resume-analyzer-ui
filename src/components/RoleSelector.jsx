@@ -10,7 +10,7 @@ export default function RoleSelector({ role, setRole }) {
 
   return (
     <div className="card">
-      <div className="card-title">Target Role</div>
+      <div className="section-heading">Target Role</div>
 
       <select value={role} onChange={(e) => setRole(e.target.value)}>
         <option value="">Select the role you are applying for</option>
