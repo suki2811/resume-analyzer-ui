@@ -1,12 +1,10 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import UploadCard from "../components/UploadCard";
-import JobDescCard from "../components/JobDescCard";
 import RoleSelector from "../components/RoleSelector";
 import ResumeText from "../components/ResumeText";
 import ATSScore from "../components/ATSScore";
 import SkillRadar from "../components/SkillRadar";
-import KeywordBars from "../components/KeywordBars";
 import Suggestions from "../components/Suggestions";
 
 const ROLE_SKILLS = {
@@ -22,10 +20,6 @@ export default function Dashboard() {
   const [role, setRole] = useState("");
   const [resumeText, setResumeText] = useState("");
   const [showResults, setShowResults] = useState(false);
-
-  function analyze() {
-    setShowResults(true);
-  }
 
   const requiredSkills = ROLE_SKILLS[role] || [];
 
@@ -46,16 +40,8 @@ export default function Dashboard() {
     <div style={{ padding: "30px" }}>
       <Navbar />
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
-          marginTop: "30px",
-        }}
-      >
+      <div style={{ marginTop: "30px" }}>
         <UploadCard />
-        <JobDescCard />
       </div>
 
       <div
@@ -72,7 +58,7 @@ export default function Dashboard() {
 
       <div style={{ textAlign: "center", marginTop: "30px" }}>
         <button
-          onClick={analyze}
+          onClick={() => setShowResults(true)}
           style={{
             padding: "14px 36px",
             background: "#4ade80",
@@ -105,11 +91,7 @@ export default function Dashboard() {
           </div>
 
           <div style={{ marginTop: "30px" }}>
-            <KeywordBars />
-          </div>
-
-          <div style={{ marginTop: "30px" }}>
-            <Suggestions />
+            <Suggestions role={role} missingSkills={missingSkills} />
           </div>
         </>
       )}
