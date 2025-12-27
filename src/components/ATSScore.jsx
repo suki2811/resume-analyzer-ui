@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+iimport { useEffect, useState } from "react";
 
 export default function ATSScore({ score }) {
   const [progress, setProgress] = useState(0);
@@ -12,37 +12,38 @@ export default function ATSScore({ score }) {
         clearInterval(interval);
       }
       setProgress(start);
-    }, 15);
+    }, 12);
   }, [score]);
 
   return (
-    <div className="card" style={{ textAlign: "center" }}>
-      <div className="card-title">ATS Score</div>
+    <div className="card">
+      <div className="section-heading">ATS Match Score</div>
 
       <div
         style={{
-          width: "140px",
-          height: "140px",
+          width: "150px",
+          height: "150px",
           borderRadius: "50%",
-          background: `conic-gradient(#4ade80 ${progress * 3.6}deg, #1f2937 0deg)`,
+          background: `conic-gradient(#6366f1 ${progress * 3.6}deg, #e5e7eb 0deg)`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          margin: "20px auto",
+          margin: "24px auto",
         }}
       >
         <div
           style={{
-            width: "100px",
-            height: "100px",
+            width: "110px",
+            height: "110px",
             borderRadius: "50%",
-            background: "#0b0f1a",
+            background: "#ffffff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "28px",
-            fontWeight: "bold",
-            color: "#4ade80",
+            fontSize: "30px",
+            fontFamily: "JetBrains Mono, monospace",
+            fontWeight: "600",
+            color: "#4f46e5",
           }}
         >
           {progress}%
