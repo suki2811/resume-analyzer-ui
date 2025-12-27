@@ -26,13 +26,14 @@ export default function Landing({ onStart }) {
       <p
   style={{
     fontFamily: "Sacramento, cursive",
-    fontSize: "26px",
-    color: "#9ca3af",
-    marginBottom: "30px",
+    fontSize: "34px",
+    color: "#475569",
+    marginBottom: "60px",
   }}
 >
   A calm way to understand your resume
 </p>
+
 
 
 
