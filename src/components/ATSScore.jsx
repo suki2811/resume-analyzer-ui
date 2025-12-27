@@ -1,15 +1,16 @@
 export default function ATSScore({ score }) {
   return (
-    <div
-      style={{
-        background: "#161a22",
-        padding: "20px",
-        borderRadius: "12px",
-        textAlign: "center",
-      }}
-    >
-      <h3>ATS Score</h3>
-      <div style={{ fontSize: "48px", color: "#4ade80" }}>{score}%</div>
+    <div className="card" style={{ textAlign: "center" }}>
+      <div className="card-title">ATS Score</div>
+      <div
+        style={{
+          fontSize: "56px",
+          fontWeight: "bold",
+          color: "#4ade80",
+        }}
+      >
+        {score}%
+      </div>
     </div>
   );
 }
