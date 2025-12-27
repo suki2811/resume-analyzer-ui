@@ -44,20 +44,15 @@ export default function Landing({ onStart }) {
       </p>
 
       <button
-        onClick={onStart}
-        style={{
-          marginTop: "40px",
-          padding: "14px 32px",
-          backgroundColor: "#4ade80",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-          fontSize: "16px",
-          fontWeight: "bold",
-        }}
-      >
-        Analyze Resume →
-      </button>
+  className="primary-btn"
+  style={{
+    background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+    color: "white",
+  }}
+>
+  Analyze Resume
+</button>
+
     </div>
   );
 }
