@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
 import UploadCard from "../components/UploadCard";
 import RoleSelector from "../components/RoleSelector";
 import ResumeText from "../components/ResumeText";
@@ -37,38 +36,25 @@ export default function Dashboard() {
       : Math.round((foundSkills.length / requiredSkills.length) * 100);
 
   return (
-    <div style={{ padding: "30px" }}>
-      <Navbar />
-
-      <div style={{ marginTop: "30px" }}>
+    <div className="dashboard">
+      <div className="section fade-up fade-delay-1">
         <UploadCard />
       </div>
 
       <div
+        className="section fade-up fade-delay-2"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
-          marginTop: "24px",
+          gap: "40px",
         }}
       >
         <RoleSelector role={role} setRole={setRole} />
         <ResumeText resumeText={resumeText} setResumeText={setResumeText} />
       </div>
 
-      <div style={{ textAlign: "center", marginTop: "30px" }}>
-        <button
-          onClick={() => setShowResults(true)}
-          style={{
-            padding: "14px 36px",
-            background: "#4ade80",
-            border: "none",
-            borderRadius: "10px",
-            fontSize: "16px",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
+      <div className="section fade-up fade-delay-3" style={{ textAlign: "center" }}>
+        <button className="hero-btn" onClick={() => setShowResults(true)}>
           Analyze Resume
         </button>
       </div>
@@ -76,11 +62,11 @@ export default function Dashboard() {
       {showResults && (
         <>
           <div
+            className="section fade-up"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: "24px",
-              marginTop: "40px",
+              gap: "40px",
             }}
           >
             <ATSScore score={atsScore} />
@@ -90,7 +76,7 @@ export default function Dashboard() {
             />
           </div>
 
-          <div style={{ marginTop: "30px" }}>
+          <div className="section fade-up">
             <Suggestions role={role} missingSkills={missingSkills} />
           </div>
         </>
