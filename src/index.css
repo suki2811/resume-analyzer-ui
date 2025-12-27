@@ -149,5 +149,10 @@ select:focus {
 .card + .card {
   margin-top: 0;
 }
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin: 60px 0;
+}
 
 
