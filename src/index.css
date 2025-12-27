@@ -40,6 +40,13 @@ body {
   margin-bottom: 14px;
   letter-spacing: 0.3px;
 }
+h1,
+h2,
+h3 {
+  font-family: "Inter", system-ui, sans-serif;
+  letter-spacing: -0.3px;
+}
+
 
 /* Inputs */
 input,
