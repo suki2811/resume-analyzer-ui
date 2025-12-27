@@ -1,11 +1,11 @@
 export default function UploadCard() {
   return (
     <div className="card">
-      <div className="card-title">Upload Resume (Optional)</div>
+      <div className="section-heading">Resume Input</div>
 
-      <p style={{ color: "#9ca3af", fontSize: "14px", marginBottom: "14px" }}>
-        Uploading is optional. Analysis uses pasted resume text.
-      </p>
+      <div className="section-subtext">
+        Upload is optional · Text analysis is primary
+      </div>
 
       <input type="file" />
     </div>
