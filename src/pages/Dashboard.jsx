@@ -37,6 +37,21 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
+      <div
+  style={{
+    display: "inline-block",
+    padding: "6px 14px",
+    borderRadius: "999px",
+    background: "#eef2ff",
+    color: "#4338ca",
+    fontSize: "13px",
+    fontWeight: "600",
+    marginBottom: "24px",
+  }}
+>
+  Demo Mode · Frontend ATS Simulation
+</div>
+
       <div className="section fade-up fade-delay-1">
         <UploadCard />
       </div>
