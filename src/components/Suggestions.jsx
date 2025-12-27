@@ -1,17 +1,17 @@
 export default function Suggestions({ role, missingSkills }) {
   return (
     <div className="card">
-      <div className="card-title">Suggestions for {role}</div>
+      <div className="section-heading">Improvement Suggestions</div>
 
       {missingSkills.length === 0 ? (
-        <p style={{ color: "#4ade80" }}>
-          Your resume already matches this role very well.
+        <p style={{ color: "#16a34a" }}>
+          Your resume aligns well with the selected role.
         </p>
       ) : (
-        <ul style={{ color: "#9ca3af" }}>
+        <ul>
           {missingSkills.map((skill) => (
             <li key={skill}>
-              Consider adding <b>{skill}</b> through projects or coursework.
+              Strengthen <b>{skill}</b> through projects or coursework.
             </li>
           ))}
         </ul>
