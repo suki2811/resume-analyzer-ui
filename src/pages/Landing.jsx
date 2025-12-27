@@ -43,15 +43,10 @@ export default function Landing({ onStart }) {
         seconds.
       </p>
 
-      <button
-  className="primary-btn"
-  style={{
-    background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
-    color: "white",
-  }}
->
+     <button className="hero-btn" onClick={onStart}>
   Analyze Resume
 </button>
+
 
     </div>
   );
