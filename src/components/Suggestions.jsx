@@ -1,18 +1,21 @@
-export default function Suggestions() {
+export default function Suggestions({ role, missingSkills }) {
   return (
-    <div
-      style={{
-        background: "#161a22",
-        padding: "20px",
-        borderRadius: "12px",
-      }}
-    >
-      <h3>Suggestions</h3>
-      <ul style={{ color: "#9ca3af" }}>
-        <li>Add measurable project impact</li>
-        <li>Include Docker & System Design keywords</li>
-        <li>Improve bullet point clarity</li>
-      </ul>
+    <div className="card">
+      <div className="card-title">Suggestions for {role}</div>
+
+      {missingSkills.length === 0 ? (
+        <p style={{ color: "#4ade80" }}>
+          Your resume already matches this role very well.
+        </p>
+      ) : (
+        <ul style={{ color: "#9ca3af" }}>
+          {missingSkills.map((skill) => (
+            <li key={skill}>
+              Consider adding <b>{skill}</b> through projects or coursework.
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
