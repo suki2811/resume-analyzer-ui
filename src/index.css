@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0f1115;
+  color: #e5e7eb;
+  font-family: monospace;
+}
