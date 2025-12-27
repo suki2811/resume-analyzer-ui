@@ -1,28 +1,49 @@
 export default function SkillRadar({ foundSkills, missingSkills }) {
   return (
     <div className="card">
-      <div className="section-heading">Skill Alignment</div>
+      <div
+        style={{
+          fontFamily: "Rubik Mono One, monospace",
+          fontSize: "20px",
+          marginBottom: "20px",
+        }}
+      >
+        SKILL MATCH
+      </div>
 
-      {foundSkills.map((skill) => (
-        <div key={skill} style={{ color: "#16a34a", marginBottom: "6px" }}>
-          {skill} ✔
-        </div>
-      ))}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+        {foundSkills.map((skill) => (
+          <span
+            key={skill}
+            style={{
+              padding: "8px 16px",
+              borderRadius: "999px",
+              background: "#dcfce7",
+              color: "#166534",
+              fontSize: "14px",
+              fontWeight: "600",
+            }}
+          >
+            {skill} ✓
+          </span>
+        ))}
 
-      {missingSkills.map((skill) => (
-        <div
-          key={skill}
-          style={{
-            color: "#dc2626",
-            background: "#f1f5f9",
-            padding: "8px 12px",
-            borderRadius: "10px",
-            marginTop: "8px",
-          }}
-        >
-          {skill} ✘ Missing
-        </div>
-      ))}
+        {missingSkills.map((skill) => (
+          <span
+            key={skill}
+            style={{
+              padding: "8px 16px",
+              borderRadius: "999px",
+              background: "#fee2e2",
+              color: "#991b1b",
+              fontSize: "14px",
+              fontWeight: "600",
+            }}
+          >
+            {skill} ✕
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
