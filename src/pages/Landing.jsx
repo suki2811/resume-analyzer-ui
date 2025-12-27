@@ -14,13 +14,15 @@ export default function Landing({ onStart }) {
       <h1
   style={{
     fontFamily: "Rubik Mono One, monospace",
-    fontSize: "52px",
-    letterSpacing: "1px",
-    marginBottom: "12px",
+    fontSize: "76px",
+    lineHeight: "1.05",
+    letterSpacing: "2px",
+    marginBottom: "20px",
   }}
 >
   Resume Analyzer
 </h1>
+
       <p
   style={{
     fontFamily: "Sacramento, cursive",
