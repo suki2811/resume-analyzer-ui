@@ -21,6 +21,17 @@ export default function Landing({ onStart }) {
 >
   Resume Analyzer
 </h1>
+      <p
+  style={{
+    fontFamily: "Sacramento, cursive",
+    fontSize: "26px",
+    color: "#9ca3af",
+    marginBottom: "30px",
+  }}
+>
+  A calm way to understand your resume
+</p>
+
 
 
       <p style={{ color: "#9ca3af", maxWidth: "600px" }}>
