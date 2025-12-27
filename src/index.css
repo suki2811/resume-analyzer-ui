@@ -4,7 +4,20 @@
 
 body {
   margin: 0;
-  background-color: #0f1115;
+  background: radial-gradient(circle at top, #121826, #0b0f1a);
   color: #e5e7eb;
-  font-family: monospace;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.card {
+  background: linear-gradient(145deg, #161a22, #10141c);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
 }
