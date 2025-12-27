@@ -34,6 +34,8 @@ export default function Dashboard() {
     requiredSkills.length === 0
       ? 0
       : Math.round((foundSkills.length / requiredSkills.length) * 100);
+  <div className="soft-divider" />
+
 
   return (
     <div className="dashboard">
