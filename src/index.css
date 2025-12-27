@@ -145,4 +145,9 @@ select:focus {
   margin-bottom: 14px;
   color: #0f172a;
 }
+/* Result section spacing */
+.card + .card {
+  margin-top: 0;
+}
+
 
