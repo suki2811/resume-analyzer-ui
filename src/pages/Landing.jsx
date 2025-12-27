@@ -46,6 +46,16 @@ export default function Landing({ onStart }) {
      <button className="hero-btn" onClick={onStart}>
   Analyze Resume
 </button>
+      <p
+  style={{
+    marginTop: "18px",
+    fontSize: "14px",
+    color: "#64748b",
+  }}
+>
+  No sign-up required · Demo mode
+</p>
+
 
 
     </div>
