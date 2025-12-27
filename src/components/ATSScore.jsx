@@ -1,47 +1,55 @@
-iimport { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ATSScore({ score }) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    let start = 0;
+    let i = 0;
     const interval = setInterval(() => {
-      start += 1;
-      if (start >= score) {
-        start = score;
+      i++;
+      if (i >= score) {
+        i = score;
         clearInterval(interval);
       }
-      setProgress(start);
+      setProgress(i);
     }, 12);
   }, [score]);
 
   return (
-    <div className="card">
-      <div className="section-heading">ATS Match Score</div>
+    <div className="card" style={{ textAlign: "center" }}>
+      <div
+        style={{
+          fontFamily: "Rubik Mono One, monospace",
+          fontSize: "20px",
+          marginBottom: "20px",
+        }}
+      >
+        ATS SCORE
+      </div>
 
       <div
         style={{
-          width: "150px",
-          height: "150px",
+          width: "160px",
+          height: "160px",
           borderRadius: "50%",
           background: `conic-gradient(#6366f1 ${progress * 3.6}deg, #e5e7eb 0deg)`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          margin: "24px auto",
+          margin: "0 auto",
         }}
       >
         <div
           style={{
-            width: "110px",
-            height: "110px",
+            width: "120px",
+            height: "120px",
             borderRadius: "50%",
             background: "#ffffff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "30px",
             fontFamily: "JetBrains Mono, monospace",
+            fontSize: "32px",
             fontWeight: "600",
             color: "#4f46e5",
           }}
@@ -49,6 +57,16 @@ export default function ATSScore({ score }) {
           {progress}%
         </div>
       </div>
+
+      <p
+        style={{
+          marginTop: "18px",
+          color: "#64748b",
+          fontSize: "14px",
+        }}
+      >
+        Match with selected role
+      </p>
     </div>
   );
 }
