@@ -1,159 +1,147 @@
-/* ===== RESET ===== */
+/* ===============================
+   GLOBAL RESET
+================================ */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
 }
 
-/* ===== PAGE WRAPPER ===== */
 body {
-  background: radial-gradient(circle at top, #f3f6ff 0%, #ffffff 60%);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #eef2ff, #f8fafc 60%);
   color: #0f172a;
 }
 
-/* ===== MAIN CONTAINER ===== */
-.app-container {
-  max-width: 1200px;
+/* ===============================
+   DASHBOARD LAYOUT
+================================ */
+.dashboard {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 64px 24px 120px;
 }
 
-/* ===== SECTION SPACING ===== */
+/* Each vertical section */
 .section {
-  margin-bottom: 48px; /* BIG breathing space */
+  margin-bottom: 72px; /* 🔥 MAIN SPACING FIX */
 }
 
-/* ===== CARDS ===== */
+/* ===============================
+   CARDS (ALL BOXES SAME WIDTH)
+================================ */
 .card {
   background: #ffffff;
-  border-radius: 20px;
-  padding: 32px;
+  border-radius: 24px;
+  padding: 28px 32px;
   box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  width: 100%;
 }
 
-/* ===== INPUT GRID ===== */
-.input-grid {
+/* Grid for 2-column sections */
+.grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1.3fr; /* Resume content wider */
-  gap: 40px; /* FIXES box closeness */
+  grid-template-columns: 1fr 1fr;
+  gap: 56px; /* 🔥 MORE BREATHING SPACE */
 }
 
-/* ===== TITLES ===== */
+/* ===============================
+   HEADINGS
+================================ */
 h2 {
   font-size: 20px;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
 }
 
-/* ===== SUBTEXT ===== */
-.subtext {
-  font-size: 14px;
-  color: #64748b;
-  margin-bottom: 16px;
-}
-
-/* ===== INPUTS ===== */
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  font-size: 14px;
-  outline: none;
-}
-
-textarea {
-  min-height: 180px;
-  resize: vertical;
-}
-
-/* ===== ANALYZE BUTTON ===== */
-.analyze-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 64px 0; /* FIXES closeness */
-}
-
-.analyze-btn {
-  background: linear-gradient(180deg, #000000, #111827);
-  color: #ffffff;
-  border: none;
-  padding: 18px 64px;
-  font-size: 16px;
+/* ===============================
+   BUTTON (ANALYZE)
+================================ */
+.hero-btn {
+  margin-top: 32px;
+  padding: 18px 56px;
   border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.analyze-btn:hover {
+.hero-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
 }
 
-/* ===== RESULTS GRID ===== */
-.results-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 48px;
-}
-
-/* ===== ATS SCORE ===== */
-.ats-circle {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #9ca3af 0deg,
-    #9ca3af var(--score),
-    #e5e7eb var(--score)
-  );
+/* ===============================
+   ATS SCORE (FIXED GRAY RING)
+================================ */
+.ats-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 24px auto;
 }
 
-.ats-circle span {
-  background: #ffffff;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ats-ring-bg {
+  stroke: #e5e7eb; /* ✅ TRUE GRAY */
+}
+
+.ats-ring-value {
+  stroke: #6366f1; /* Indigo accent */
+}
+
+.ats-percent {
   font-size: 28px;
-  font-weight: 700;
-  color: #6b7280; /* GRAYISH tone */
+  font-weight: 800;
+  fill: #334155;
 }
 
-/* ===== SKILLS ===== */
-.skill-badge {
+/* ===============================
+   SKILL TAGS
+================================ */
+.skill-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;
-  margin: 6px;
+  font-weight: 600;
+  margin: 6px 8px 0 0;
 }
 
-.skill-ok {
+.skill-found {
   background: #dcfce7;
   color: #166534;
 }
 
-.skill-miss {
+.skill-missing {
   background: #fee2e2;
   color: #991b1b;
 }
 
-/* ===== SUGGESTIONS ===== */
-.suggestions {
-  margin-top: 48px;
+/* ===============================
+   TEXTAREAS & INPUTS
+================================ */
+textarea,
+select,
+input[type="file"] {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 14px;
+  font-size: 14px;
+  background: #f8fafc;
 }
+
+/* ===============================
+   SUGGESTIONS
+================================ */
+.suggestions {
+  line-height: 1.7;
+  color: #334155;
+}
+
