@@ -208,4 +208,110 @@ textarea {
     margin-top: 56px;
   }
 }
+/* ===============================
+   LAYOUT SPACING FIX (PREMIUM)
+================================ */
+
+/* Main page container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 120px;
+}
+
+/* Section spacing */
+.section {
+  margin-bottom: 56px;
+}
+
+/* Resume input card */
+.resume-input-card {
+  margin-bottom: 48px;
+}
+
+/* Two-column layout (Target Role + Resume Content) */
+.dual-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* 👈 THIS fixes cramped look */
+  margin-bottom: 64px;
+}
+
+/* Individual cards */
+.card {
+  padding: 32px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   ANALYZE BUTTON FIX
+================================ */
+
+.analyze-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 100px; /* 👈 pushes away from boxes & results */
+}
+
+.analyze-btn {
+  width: 320px; /* 👈 not full width = premium */
+  padding: 18px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #111827, #000000);
+  color: white;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analyze-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ===============================
+   RESULTS SECTION SPACING
+================================ */
+
+.results-container {
+  margin-top: 100px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+/* Suggestions card */
+.suggestions-card {
+  margin-top: 48px;
+  padding: 36px;
+  border-radius: 24px;
+}
+
+/* ===============================
+   MOBILE FIX
+================================ */
+
+@media (max-width: 900px) {
+  .dual-card-container,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analyze-btn {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
 
