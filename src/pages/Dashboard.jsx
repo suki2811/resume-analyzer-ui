@@ -36,11 +36,7 @@ export default function Dashboard() {
       : Math.round((foundSkills.length / requiredSkills.length) * 100);
 
   return (
-    <div className="app-container dashboard">
-      {/* Demo badge */}
-      <div className="demo-badge">
-        Demo Mode · Frontend ATS Simulation
-      </div>
+    <div className="dashboard">
 
       {/* Upload */}
       <div className="section">
@@ -48,49 +44,20 @@ export default function Dashboard() {
       </div>
 
       {/* Role + Resume */}
-      <div
-  className="section fade-up fade-delay-2"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "40px",
-  }}
->
-  <RoleSelector role={role} setRole={setRole} />
-  <ResumeText resumeText={resumeText} setResumeText={setResumeText} />
-</div>
-<div
-  className="section fade-up"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "40px",
-  }}
->
-  <ATSScore score={atsScore} />
-  <SkillRadar
-    foundSkills={foundSkills}
-    missingSkills={missingSkills}
-  />
-</div>
-
-      <div className="section input-grid">
+      <div className="section grid-2">
         <RoleSelector role={role} setRole={setRole} />
         <ResumeText resumeText={resumeText} setResumeText={setResumeText} />
       </div>
 
       {/* Analyze */}
-      <div className="section analyze-wrapper">
+      <div className="section analyze-section">
         {(!role || !resumeText) && (
           <p className="helper-text">
             Select a role and paste resume text to get meaningful results
           </p>
         )}
 
-        <button
-          className="analyze-btn"
-          onClick={() => setShowResults(true)}
-        >
+        <button className="hero-btn" onClick={() => setShowResults(true)}>
           Analyze Resume
         </button>
       </div>
@@ -98,7 +65,7 @@ export default function Dashboard() {
       {/* Results */}
       {showResults && (
         <>
-          <div className="section results-grid">
+          <div className="section grid-2">
             <ATSScore score={atsScore} />
             <SkillRadar
               foundSkills={foundSkills}
