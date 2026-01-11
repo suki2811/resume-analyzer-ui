@@ -23,15 +23,9 @@ export default function Landing({ onStart }) {
         Resume Analyzer
       </h1>
 
-      <p
-        style={{
-          fontFamily: "Sacramento, cursive",
-          fontSize: "36px",
-          color: "#475569",
-          marginBottom: "70px",
-        }}
-      >
-        A calm way to understand your resume
+      {/* SUBHEADING */}
+      <p className="subtitle">
+        A simple, role-focused way to understand your resume
       </p>
 
       <button className="hero-btn" onClick={onStart}>
@@ -40,7 +34,7 @@ export default function Landing({ onStart }) {
 
       <p
         style={{
-          marginTop: "22px",
+          marginTop: "20px",
           fontSize: "14px",
           color: "#64748b",
         }}
