@@ -1,4 +1,4 @@
-/* RESET */
+//* RESET */
 * {
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@ body {
   font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
-/* DASHBOARD WRAPPER */
+/* DASHBOARD */
 .dashboard {
   max-width: 1200px;
   margin: 0 auto;
@@ -31,24 +31,26 @@ body {
 
 /* CARD */
 .card {
-  background: #ffffff;
+  background: white;
   border-radius: 22px;
   padding: 32px;
-  box-shadow:
-    0 20px 40px rgba(15, 23, 42, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+/* HEADINGS */
+.section-heading {
+  font-family: "Rubik Mono One", monospace;
+  font-size: 20px;
+  margin-bottom: 16px;
 }
 
-.card-title {
+/* SUB HEADING (FIXED FONT) */
+.subtitle {
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 14px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 60px;
 }
 
 /* INPUTS */
@@ -59,100 +61,30 @@ select {
   padding: 14px;
   border-radius: 14px;
   border: 1px solid #e5e7eb;
-  font-size: 14px;
   background: #f8fafc;
-  outline: none;
+  font-size: 14px;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #6366f1;
-}
-
-/* HERO BUTTON */
+/* BLACK HERO BUTTON */
 .hero-btn {
-  margin-top: 20px;
-  padding: 24px 80px;
-  font-size: 22px;
+  margin-top: 24px;
+  padding: 22px 80px;
+  font-size: 20px;
   font-weight: 700;
   border-radius: 999px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
+  background: #000000;
+  color: #ffffff;
   border: none;
   cursor: pointer;
-  box-shadow:
-    0 20px 40px rgba(99, 102, 241, 0.35),
-    0 0 0 0 rgba(99, 102, 241, 0.4);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-btn:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 30px 60px rgba(99, 102, 241, 0.45),
-    0 0 0 10px rgba(99, 102, 241, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 26px 52px rgba(0, 0, 0, 0.45);
 }
 
 .hero-btn:active {
-  transform: translateY(-1px);
+  transform: translateY(0);
 }
-
-/* SECTIONS */
-.section {
-  margin-top: 56px;
-}
-
-/* ANIMATIONS */
-.fade-up {
-  opacity: 0;
-  transform: translateY(18px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-.fade-delay-1 { animation-delay: 0.1s; }
-.fade-delay-2 { animation-delay: 0.2s; }
-.fade-delay-3 { animation-delay: 0.3s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Section Headings */
-.section-heading {
-  font-family: "Rubik Mono One", monospace;
-  font-size: 22px;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-  color: #1e293b;
-}
-
-/* Sub-heading / helper text */
-.section-subtext {
-  font-family: "Sacramento", cursive;
-  font-size: 22px;
-  color: #64748b;
-  margin-bottom: 18px;
-}
-
-/* Normal card title override */
-.card-title {
-  font-family: "Space Grotesk", system-ui, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 14px;
-  color: #0f172a;
-}
-/* Result section spacing */
-.card + .card {
-  margin-top: 0;
-}
-.soft-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
-  margin: 60px 0;
-}
-
-
