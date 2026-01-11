@@ -3,6 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/resume-analyzer-ui/"
+  base: "/resume-analyzer-ui/",
+  build: {
+    assetsDir: "assets"
+  }
 });
 
