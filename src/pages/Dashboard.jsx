@@ -34,71 +34,45 @@ export default function Dashboard() {
     requiredSkills.length === 0
       ? 0
       : Math.round((foundSkills.length / requiredSkills.length) * 100);
-  <div className="soft-divider" />
-
 
   return (
-    <div className="dashboard">
-      <div
-  style={{
-    display: "inline-block",
-    padding: "6px 14px",
-    borderRadius: "999px",
-    background: "#eef2ff",
-    color: "#4338ca",
-    fontSize: "13px",
-    fontWeight: "600",
-    marginBottom: "24px",
-  }}
->
-  Demo Mode · Frontend ATS Simulation
-</div>
+    <div className="app-container dashboard">
+      {/* Demo badge */}
+      <div className="demo-badge">
+        Demo Mode · Frontend ATS Simulation
+      </div>
 
-      <div className="section fade-up fade-delay-1">
+      {/* Upload */}
+      <div className="section">
         <UploadCard />
       </div>
 
-      <div
-        className="section fade-up fade-delay-2"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "40px",
-        }}
-      >
+      {/* Role + Resume */}
+      <div className="section input-grid">
         <RoleSelector role={role} setRole={setRole} />
         <ResumeText resumeText={resumeText} setResumeText={setResumeText} />
       </div>
 
-      <div className="section fade-up fade-delay-3" style={{ textAlign: "center" }}>
+      {/* Analyze */}
+      <div className="section analyze-wrapper">
         {(!role || !resumeText) && (
-  <p
-    style={{
-      marginTop: "20px",
-      fontSize: "14px",
-      color: "#64748b",
-      textAlign: "center",
-    }}
-  >
-    Select a role and paste resume text to get meaningful results
-  </p>
-)}
+          <p className="helper-text">
+            Select a role and paste resume text to get meaningful results
+          </p>
+        )}
 
-        <button className="hero-btn" onClick={() => setShowResults(true)}>
+        <button
+          className="analyze-btn"
+          onClick={() => setShowResults(true)}
+        >
           Analyze Resume
         </button>
       </div>
 
+      {/* Results */}
       {showResults && (
         <>
-          <div
-            className="section fade-up"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "40px",
-            }}
-          >
+          <div className="section results-grid">
             <ATSScore score={atsScore} />
             <SkillRadar
               foundSkills={foundSkills}
@@ -106,7 +80,7 @@ export default function Dashboard() {
             />
           </div>
 
-          <div className="section fade-up">
+          <div className="section">
             <Suggestions role={role} missingSkills={missingSkills} />
           </div>
         </>
