@@ -153,3 +153,59 @@ textarea {
     padding-bottom: 100px;
   }
 }
+/* ============================
+   FINAL VISUAL SPACING POLISH
+   ============================ */
+
+/* Space after top Resume Input card */
+.resume-input-section {
+  margin-bottom: 80px;
+}
+
+/* Two-card section wrapper */
+.role-content-section {
+  margin-bottom: 96px;
+}
+
+/* Increase space between the two cards */
+.role-content-section .grid-2 {
+  gap: 64px;
+}
+
+/* Make each card breathe more */
+.card {
+  padding: 40px;
+}
+
+/* Space before Analyze button */
+.analyze-section {
+  margin-top: 80px;
+}
+
+/* Helper text spacing */
+.helper-text {
+  margin-top: 40px;
+  margin-bottom: 56px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Mobile refinement */
+@media (max-width: 900px) {
+  .resume-input-section {
+    margin-bottom: 56px;
+  }
+
+  .role-content-section {
+    margin-bottom: 72px;
+  }
+
+  .role-content-section .grid-2 {
+    gap: 40px;
+  }
+
+  .analyze-section {
+    margin-top: 56px;
+  }
+}
+
