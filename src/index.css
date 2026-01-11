@@ -456,5 +456,21 @@ textarea {
   color: #6b7280;
   font-size: 14px;
 }
+/* =========================
+   FORCE ATS SCORE COLORS
+   ========================= */
+
+.ats-card svg circle:nth-child(2) {
+  stroke: #9ca3af !important; /* gray-400 */
+}
+
+.ats-card text {
+  fill: #6b7280 !important; /* gray-500 */
+}
+
+/* Remove any gradient / theme override */
+.ats-card svg {
+  filter: none !important;
+}
 
 
