@@ -428,5 +428,33 @@ textarea {
   color: #6b7280 !important;
   font-weight: 600;
 }
+/* ATS CARD */
+.ats-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ATS TITLE */
+.card-title {
+  font-family: "Rubik Mono One", monospace;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+/* SVG CENTERING */
+.ats-svg {
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+/* SUBTEXT */
+.ats-subtext {
+  color: #6b7280;
+  font-size: 14px;
+}
 
 
