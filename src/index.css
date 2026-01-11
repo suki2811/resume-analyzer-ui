@@ -78,3 +78,55 @@ h2 {
   cursor: pointer;
   box-shadow: 0 20px 45px rgba(0,0,0,0.35);
 }
+/* ===== FINAL LAYOUT FIX ===== */
+
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 24px 140px;
+}
+
+.section {
+  margin-bottom: 88px;
+}
+
+/* TWO COLUMN GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr; /* resume content wider */
+  gap: 64px;
+}
+
+/* ANALYZE SECTION */
+.analyze-section {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.helper-text {
+  margin-bottom: 28px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.hero-btn {
+  padding: 20px 64px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
