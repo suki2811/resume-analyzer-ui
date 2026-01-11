@@ -1,44 +1,146 @@
-import React from "react";
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-const ATSScore = ({ score = 20 }) => {
-  const radius = 70;
-  const strokeWidth = 10;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (score / 100) * circumference;
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #eef2ff, #f8fafc 60%);
+  color: #0f172a;
+}
 
-  return (
-    <div className="ats-card">
-      <h3 className="card-title">ATS SCORE</h3>
+/* ===============================
+   DASHBOARD LAYOUT
+================================ */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 120px;
+}
 
-      <svg
-        width="180"
-        height="180"
-        viewBox="0 0 180 180"
-        className="ats-svg"
-      >
-        {/* Background ring */}
-        <circle
-          cx="90"
-          cy="90"
-          r={radius}
-          fill="none"
-          stroke="#e5e7eb"
-          strokeWidth={strokeWidth}
-        />
+/* Each vertical section */
+.section {
+  margin-bottom: 72px; /* 🔥 MAIN SPACING FIX */
+}
 
-        {/* Progress ring */}
-        <circle
-          cx="90"
-          cy="90"
-          r={radius}
-          fill="none"
-          stroke="#9ca3af"
-          strokeWidth={strokeWidth}
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          strokeLinecap="round"
-          transform="rotate(-90 90 90)"
-        />
+/* ===============================
+   CARDS (ALL BOXES SAME WIDTH)
+================================ */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  width: 100%;
+}
 
-        {/
+/* Grid for 2-column sections */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px; /* 🔥 MORE BREATHING SPACE */
+}
 
+/* ===============================
+   HEADINGS
+================================ */
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+
+/* ===============================
+   BUTTON (ANALYZE)
+================================ */
+.hero-btn {
+  margin-top: 32px;
+  padding: 18px 56px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   ATS SCORE (FIXED GRAY RING)
+================================ */
+.ats-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ats-ring-bg {
+  stroke: #e5e7eb; /* ✅ TRUE GRAY */
+}
+
+.ats-ring-value {
+  stroke: #6366f1; /* Indigo accent */
+}
+
+.ats-percent {
+  font-size: 28px;
+  font-weight: 800;
+  fill: #334155;
+}
+
+/* ===============================
+   SKILL TAGS
+================================ */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 6px 8px 0 0;
+}
+
+.skill-found {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.skill-missing {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===============================
+   TEXTAREAS & INPUTS
+================================ */
+textarea,
+select,
+input[type="file"] {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 14px;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+/* ===============================
+   SUGGESTIONS
+================================ */
+.suggestions {
+  line-height: 1.7;
+  color: #334155;
+}
