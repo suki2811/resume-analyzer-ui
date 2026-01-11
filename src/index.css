@@ -313,5 +313,73 @@ textarea {
     max-width: 340px;
   }
 }
+/* ===============================
+   FINAL SPACING & VISUAL POLISH
+================================ */
+
+/* Push Analyze button away from results */
+.analyze-button-wrapper {
+  margin-top: 90px !important;
+  margin-bottom: 140px !important; /* 👈 BIG separation */
+}
+
+/* Results container spacing */
+.results-container {
+  margin-top: 120px !important;
+}
+
+/* ATS + Skill cards spacing */
+.results-grid {
+  gap: 48px !important;
+  margin-bottom: 72px !important;
+}
+
+/* Suggestions spacing */
+.suggestions-card {
+  margin-top: 72px !important;
+  padding: 40px !important;
+}
+
+/* ===============================
+   ATS SCORE COLOR FIX (GRAY)
+================================ */
+
+/* Outer ATS ring */
+.ats-ring,
+.ats-circle,
+.progress-ring circle {
+  stroke: #e5e7eb !important; /* soft gray */
+}
+
+/* ATS percentage text */
+.ats-percentage,
+.ats-score-text {
+  color: #6b7280 !important; /* muted gray */
+  font-weight: 600;
+}
+
+/* Subtitle under ATS */
+.ats-subtext {
+  color: #9ca3af !important;
+}
+
+/* ===============================
+   CARD DEPTH IMPROVEMENT
+================================ */
+
+.card {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ===============================
+   MOBILE SAFETY
+================================ */
+
+@media (max-width: 900px) {
+  .analyze-button-wrapper {
+    margin-top: 64px !important;
+    margin-bottom: 100px !important;
+  }
+}
 
 
