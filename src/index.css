@@ -1,465 +1,138 @@
-//* RESET */
+/* ===============================
+   GLOBAL RESET
+================================ */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* GLOBAL */
+html,
 body {
-  margin: 0;
-  min-height: 100vh;
-  background: radial-gradient(
-      900px 500px at top left,
-      #e9f0ff,
-      transparent
-    ),
-    radial-gradient(
-      800px 500px at bottom right,
-      #fff1f2,
-      transparent
-    ),
-    #f8fafc;
-  color: #0f172a;
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%);
+  color: #111827;
 }
 
-/* DASHBOARD */
-.dashboard {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 24px 100px;
-}
-
-/* CARD */
-.card {
-  background: white;
-  border-radius: 22px;
-  padding: 32px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-}
-
-/* HEADINGS */
-.section-heading {
-  font-family: "Rubik Mono One", monospace;
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-/* SUB HEADING (FIXED FONT) */
-.subtitle {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #475569;
-  margin-bottom: 60px;
-}
-
-/* INPUTS */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 14px;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  background: #f8fafc;
-  font-size: 14px;
-}
-
-/* BLACK HERO BUTTON */
-.hero-btn {
-  margin-top: 24px;
-  padding: 22px 80px;
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 999px;
-  background: #000000;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 26px 52px rgba(0, 0, 0, 0.45);
-}
-
-.hero-btn:active {
-  transform: translateY(0);
-}
-/* =========================
-   SPACING POLISH (FINAL)
-   ========================= */
-
-/* Page container spacing */
-.dashboard {
-  padding-top: 80px;
-  padding-bottom: 120px;
-}
-
-/* Section cards spacing */
-.card {
-  margin-bottom: 48px;
-}
-
-/* Headings spacing */
-.section-heading {
-  margin-bottom: 20px;
-}
-
-/* Upload section spacing */
-.card input[type="file"] {
-  margin-top: 14px;
-}
-
-/* Two-column layout spacing (Target role + Resume content) */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-top: 48px;
-}
-
-/* Textarea spacing */
-textarea {
-  margin-top: 14px;
-  min-height: 220px;
-}
-
-/* Helper text below inputs */
-.helper-text {
-  margin-top: 32px;
-  margin-bottom: 48px;
-  text-align: center;
-  color: #64748b;
-  font-size: 14px;
-}
-
-/* Analyze button spacing */
-.hero-btn {
-  margin-top: 40px;
-}
-
-/* Mobile spacing fix */
-@media (max-width: 900px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .dashboard {
-    padding-top: 60px;
-    padding-bottom: 100px;
-  }
-}
-/* ============================
-   FINAL VISUAL SPACING POLISH
-   ============================ */
-
-/* Space after top Resume Input card */
-.resume-input-section {
-  margin-bottom: 80px;
-}
-
-/* Two-card section wrapper */
-.role-content-section {
-  margin-bottom: 96px;
-}
-
-/* Increase space between the two cards */
-.role-content-section .grid-2 {
-  gap: 64px;
-}
-
-/* Make each card breathe more */
-.card {
-  padding: 40px;
-}
-
-/* Space before Analyze button */
-.analyze-section {
-  margin-top: 80px;
-}
-
-/* Helper text spacing */
-.helper-text {
-  margin-top: 40px;
-  margin-bottom: 56px;
-  font-size: 14px;
-  color: #64748b;
-}
-
-/* Mobile refinement */
-@media (max-width: 900px) {
-  .resume-input-section {
-    margin-bottom: 56px;
-  }
-
-  .role-content-section {
-    margin-bottom: 72px;
-  }
-
-  .role-content-section .grid-2 {
-    gap: 40px;
-  }
-
-  .analyze-section {
-    margin-top: 56px;
-  }
-}
 /* ===============================
-   LAYOUT SPACING FIX (PREMIUM)
+   PAGE CONTAINER
 ================================ */
-
-/* Main page container */
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 24px 120px;
-}
-
-/* Section spacing */
-.section {
-  margin-bottom: 56px;
-}
-
-/* Resume input card */
-.resume-input-card {
-  margin-bottom: 48px;
-}
-
-/* Two-column layout (Target Role + Resume Content) */
-.dual-card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px; /* 👈 THIS fixes cramped look */
-  margin-bottom: 64px;
-}
-
-/* Individual cards */
-.card {
-  padding: 32px;
-  border-radius: 22px;
-  background: white;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+  padding: 64px 24px 120px;
 }
 
 /* ===============================
-   ANALYZE BUTTON FIX
+   SECTION HEADINGS
 ================================ */
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
 
-.analyze-button-wrapper {
+.section-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   INPUT GRID (IMPORTANT FIX)
+================================ */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px; /* MORE SPACE */
+  margin-top: 48px;
+}
+
+/* ===============================
+   INPUT CARDS
+================================ */
+.input-card {
+  width: 100%;
+  min-height: 280px;
+  padding: 36px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   INPUTS
+================================ */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  background: #f9fafb;
+}
+
+textarea {
+  min-height: 160px;
+  resize: none;
+}
+
+/* ===============================
+   ANALYZE BUTTON (FIXED)
+================================ */
+.analyze-wrapper {
+  margin: 96px 0 120px; /* BIG GAP = PREMIUM */
   display: flex;
   justify-content: center;
-  margin: 80px 0 100px; /* 👈 pushes away from boxes & results */
 }
 
 .analyze-btn {
-  width: 320px; /* 👈 not full width = premium */
-  padding: 18px 0;
+  width: 340px;
+  height: 66px;
+  border-radius: 999px;
+  background: #000000;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 600;
-  border-radius: 999px;
   border: none;
   cursor: pointer;
-
-  background: linear-gradient(135deg, #111827, #000000);
-  color: white;
-
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .analyze-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.32);
 }
 
 /* ===============================
-   RESULTS SECTION SPACING
+   RESULTS GRID
 ================================ */
-
-.results-container {
-  margin-top: 100px;
-}
-
 .results-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 48px;
-}
-
-/* Suggestions card */
-.suggestions-card {
-  margin-top: 48px;
-  padding: 36px;
-  border-radius: 24px;
+  gap: 56px;
+  margin-top: 64px;
 }
 
 /* ===============================
-   MOBILE FIX
+   RESULT CARDS
 ================================ */
-
-@media (max-width: 900px) {
-  .dual-card-container,
-  .results-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .analyze-btn {
-    width: 100%;
-    max-width: 340px;
-  }
-}
-/* ===============================
-   FINAL SPACING & VISUAL POLISH
-================================ */
-
-/* Push Analyze button away from results */
-.analyze-button-wrapper {
-  margin-top: 90px !important;
-  margin-bottom: 140px !important; /* 👈 BIG separation */
-}
-
-/* Results container spacing */
-.results-container {
-  margin-top: 120px !important;
-}
-
-/* ATS + Skill cards spacing */
-.results-grid {
-  gap: 48px !important;
-  margin-bottom: 72px !important;
-}
-
-/* Suggestions spacing */
-.suggestions-card {
-  margin-top: 72px !important;
-  padding: 40px !important;
-}
-
-/* ===============================
-   ATS SCORE COLOR FIX (GRAY)
-================================ */
-
-/* Outer ATS ring */
-.ats-ring,
-.ats-circle,
-.progress-ring circle {
-  stroke: #e5e7eb !important; /* soft gray */
-}
-
-/* ATS percentage text */
-.ats-percentage,
-.ats-score-text {
-  color: #6b7280 !important; /* muted gray */
-  font-weight: 600;
-}
-
-/* Subtitle under ATS */
-.ats-subtext {
-  color: #9ca3af !important;
-}
-
-/* ===============================
-   CARD DEPTH IMPROVEMENT
-================================ */
-
-.card {
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* ===============================
-   MOBILE SAFETY
-================================ */
-
-@media (max-width: 900px) {
-  .analyze-button-wrapper {
-    margin-top: 64px !important;
-    margin-bottom: 100px !important;
-  }
-}
-/* ===============================
-   FORCE EQUAL WIDTH RESULTS
-================================ */
-
-.results-section {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.results-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 56px !important;
-  align-items: stretch !important;
-}
-
-/* Force both cards same height */
-.results-grid > div {
-  width: 100% !important;
-  min-height: 280px;
-}
-
-/* ===============================
-   ANALYZE BUTTON SPACING FIX
-================================ */
-
-.analyze-button-wrapper {
-  margin-top: 96px !important;
-  margin-bottom: 160px !important;
-}
-
-/* ===============================
-   ATS COLOR OVERRIDE (BACKUP)
-================================ */
-
-.ats-ring circle {
-  stroke: #e5e7eb !important;
-}
-
-.ats-progress circle {
-  stroke: #9ca3af !important;
-}
-
-.ats-score-text {
-  color: #6b7280 !important;
-  font-weight: 600;
-}
-/* ATS CARD */
-.ats-card {
+.result-card {
   background: #ffffff;
-  border-radius: 20px;
   padding: 40px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
-/* ATS TITLE */
-.card-title {
-  font-family: "Rubik Mono One", monospace;
-  letter-spacing: 1.5px;
-  margin-bottom: 24px;
-  color: #0f172a;
-}
-
-/* SVG CENTERING */
-.ats-svg {
-  display: block;
-  margin: 0 auto 16px auto;
-}
-
-/* SUBTEXT */
-.ats-subtext {
-  color: #6b7280;
-  font-size: 14px;
-}
-/* =========================
-   FORCE ATS SCORE COLORS
-   ========================= */
-
+/* ===============================
+   ATS SCORE (GRAY FIX)
+================================ */
 .ats-card svg circle:nth-child(2) {
   stroke: #9ca3af !important; /* gray-400 */
 }
@@ -468,9 +141,64 @@ textarea {
   fill: #6b7280 !important; /* gray-500 */
 }
 
-/* Remove any gradient / theme override */
 .ats-card svg {
   filter: none !important;
 }
 
+/* ===============================
+   SKILL TAGS
+================================ */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
+.skill-tag {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.skill-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.skill-miss {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===============================
+   SUGGESTIONS
+================================ */
+.suggestions-card {
+  margin-top: 64px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.suggestions-card p {
+  font-size: 15px;
+  color: #374151;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 900px) {
+  .input-grid,
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .analyze-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
