@@ -48,6 +48,32 @@ export default function Dashboard() {
       </div>
 
       {/* Role + Resume */}
+      <div
+  className="section fade-up fade-delay-2"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "40px",
+  }}
+>
+  <RoleSelector role={role} setRole={setRole} />
+  <ResumeText resumeText={resumeText} setResumeText={setResumeText} />
+</div>
+<div
+  className="section fade-up"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "40px",
+  }}
+>
+  <ATSScore score={atsScore} />
+  <SkillRadar
+    foundSkills={foundSkills}
+    missingSkills={missingSkills}
+  />
+</div>
+
       <div className="section input-grid">
         <RoleSelector role={role} setRole={setRole} />
         <ResumeText resumeText={resumeText} setResumeText={setResumeText} />
