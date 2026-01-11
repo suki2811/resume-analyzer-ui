@@ -381,5 +381,52 @@ textarea {
     margin-bottom: 100px !important;
   }
 }
+/* ===============================
+   FORCE EQUAL WIDTH RESULTS
+================================ */
+
+.results-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.results-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 56px !important;
+  align-items: stretch !important;
+}
+
+/* Force both cards same height */
+.results-grid > div {
+  width: 100% !important;
+  min-height: 280px;
+}
+
+/* ===============================
+   ANALYZE BUTTON SPACING FIX
+================================ */
+
+.analyze-button-wrapper {
+  margin-top: 96px !important;
+  margin-bottom: 160px !important;
+}
+
+/* ===============================
+   ATS COLOR OVERRIDE (BACKUP)
+================================ */
+
+.ats-ring circle {
+  stroke: #e5e7eb !important;
+}
+
+.ats-progress circle {
+  stroke: #9ca3af !important;
+}
+
+.ats-score-text {
+  color: #6b7280 !important;
+  font-weight: 600;
+}
 
 
