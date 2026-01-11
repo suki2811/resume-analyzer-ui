@@ -88,3 +88,68 @@ select {
 .hero-btn:active {
   transform: translateY(0);
 }
+/* =========================
+   SPACING POLISH (FINAL)
+   ========================= */
+
+/* Page container spacing */
+.dashboard {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+/* Section cards spacing */
+.card {
+  margin-bottom: 48px;
+}
+
+/* Headings spacing */
+.section-heading {
+  margin-bottom: 20px;
+}
+
+/* Upload section spacing */
+.card input[type="file"] {
+  margin-top: 14px;
+}
+
+/* Two-column layout spacing (Target role + Resume content) */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+/* Textarea spacing */
+textarea {
+  margin-top: 14px;
+  min-height: 220px;
+}
+
+/* Helper text below inputs */
+.helper-text {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Analyze button spacing */
+.hero-btn {
+  margin-top: 40px;
+}
+
+/* Mobile spacing fix */
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .dashboard {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
