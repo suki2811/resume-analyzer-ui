@@ -1,72 +1,44 @@
-import { useEffect, useState } from "react";
+import React from "react";
 
-export default function ATSScore({ score }) {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      i++;
-      if (i >= score) {
-        i = score;
-        clearInterval(interval);
-      }
-      setProgress(i);
-    }, 12);
-  }, [score]);
+const ATSScore = ({ score = 20 }) => {
+  const radius = 70;
+  const strokeWidth = 10;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (score / 100) * circumference;
 
   return (
-    <div className="card" style={{ textAlign: "center" }}>
-      <div
-        style={{
-          fontFamily: "Rubik Mono One, monospace",
-          fontSize: "20px",
-          marginBottom: "20px",
-        }}
-      >
-        ATS SCORE
-      </div>
+    <div className="ats-card">
+      <h3 className="card-title">ATS SCORE</h3>
 
-      <div
-        style={{
-          width: "160px",
-          height: "160px",
-          borderRadius: "50%",
-          background: `conic-gradient(#6366f1 ${progress * 3.6}deg, #e5e7eb 0deg)`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: "0 auto",
-        }}
+      <svg
+        width="180"
+        height="180"
+        viewBox="0 0 180 180"
+        className="ats-svg"
       >
-        <div
-          style={{
-            width: "120px",
-            height: "120px",
-            borderRadius: "50%",
-            background: "#ffffff",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontFamily: "JetBrains Mono, monospace",
-            fontSize: "32px",
-            fontWeight: "600",
-            color: "#4f46e5",
-          }}
-        >
-          {progress}%
-        </div>
-      </div>
+        {/* Background ring */}
+        <circle
+          cx="90"
+          cy="90"
+          r={radius}
+          fill="none"
+          stroke="#e5e7eb"
+          strokeWidth={strokeWidth}
+        />
 
-      <p
-        style={{
-          marginTop: "18px",
-          color: "#64748b",
-          fontSize: "14px",
-        }}
-      >
-        Match with selected role
-      </p>
-    </div>
-  );
-}
+        {/* Progress ring */}
+        <circle
+          cx="90"
+          cy="90"
+          r={radius}
+          fill="none"
+          stroke="#9ca3af"
+          strokeWidth={strokeWidth}
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          strokeLinecap="round"
+          transform="rotate(-90 90 90)"
+        />
+
+        {/
+
