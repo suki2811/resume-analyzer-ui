@@ -1,118 +1,159 @@
-/* RESET */
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ===== PAGE WRAPPER ===== */
 body {
-  font-family: Inter, system-ui, sans-serif;
-  background: #f8fafc;
-  color: #111827;
+  background: radial-gradient(circle at top, #f3f6ff 0%, #ffffff 60%);
+  color: #0f172a;
 }
 
-/* PAGE */
-.page {
-  max-width: 1100px;
+/* ===== MAIN CONTAINER ===== */
+.app-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 24px 140px;
+  padding: 48px 24px 80px;
 }
 
-/* SECTIONS */
+/* ===== SECTION SPACING ===== */
 .section {
-  margin-bottom: 96px;
+  margin-bottom: 48px; /* BIG breathing space */
 }
 
-.section.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-}
-
-.section.center {
-  display: flex;
-  justify-content: center;
-}
-
-/* CARDS */
+/* ===== CARDS ===== */
 .card {
   background: #ffffff;
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
 }
 
-.card.full {
-  width: 100%;
+/* ===== INPUT GRID ===== */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr; /* Resume content wider */
+  gap: 40px; /* FIXES box closeness */
 }
 
-.card.center {
-  text-align: center;
-}
-
-/* TEXT */
-.title {
-  font-size: 18px;
+/* ===== TITLES ===== */
+h2 {
+  font-size: 20px;
+  letter-spacing: 0.08em;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.subtitle {
+/* ===== SUBTEXT ===== */
+.subtext {
   font-size: 14px;
-  color: #6b7280;
-  margin-bottom: 20px;
+  color: #64748b;
+  margin-bottom: 16px;
 }
 
-.muted {
-  font-size: 14px;
-  color: #6b7280;
-  margin-top: 12px;
-}
-
-/* INPUTS */
+/* ===== INPUTS ===== */
 input,
 select,
 textarea {
   width: 100%;
-  padding: 14px;
-  border-radius: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
-  background: #f9fafb;
   font-size: 14px;
+  outline: none;
 }
 
 textarea {
-  min-height: 160px;
-  resize: none;
+  min-height: 180px;
+  resize: vertical;
 }
 
-/* ANALYZE BUTTON */
-.analyze {
-  width: 320px;
-  height: 64px;
-  border-radius: 999px;
-  background: #000000;
+/* ===== ANALYZE BUTTON ===== */
+.analyze-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 64px 0; /* FIXES closeness */
+}
+
+.analyze-btn {
+  background: linear-gradient(180deg, #000000, #111827);
   color: #ffffff;
   border: none;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 18px 64px;
+  font-size: 16px;
+  border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.analyze:hover {
+.analyze-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.45);
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-  .section.grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+/* ===== RESULTS GRID ===== */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
 
-  .analyze {
-    width: 100%;
-    max-width: 320px;
-  }
+/* ===== ATS SCORE ===== */
+.ats-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #9ca3af 0deg,
+    #9ca3af var(--score),
+    #e5e7eb var(--score)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto;
+}
+
+.ats-circle span {
+  background: #ffffff;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #6b7280; /* GRAYISH tone */
+}
+
+/* ===== SKILLS ===== */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin: 6px;
+}
+
+.skill-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.skill-miss {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===== SUGGESTIONS ===== */
+.suggestions {
+  margin-top: 48px;
 }
